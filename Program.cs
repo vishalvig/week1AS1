@@ -5,7 +5,6 @@ int numberOfShapes = 10;
 // Create an array of Shape objects
 Shape[] shapes = new Shape[numberOfShapes];
 
-// Initialize each shape and assign a random color
 for (int i = 0; i < numberOfShapes; i++)
 {
     shapes[i] = new Shape(); // Create a new Shape
