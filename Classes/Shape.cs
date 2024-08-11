@@ -1,11 +1,16 @@
 ﻿
+using Week1ObjectOriented.Interfaces;
+
 namespace Week1ObjectOriented.Classes
 {
-    public abstract class Shape
+    public class Shape : IShape
     {
         private int area;
 
-        public abstract int GetArea();
+        public double GetArea()
+        {
+            throw new NotImplementedException();
+        }
        
 
         public void SetArea(int Area)

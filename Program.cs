@@ -1,7 +1,27 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Week1ObjectOriented.Classes;
+int numberOfShapes = 10;
 
-var square = new Square(10);
+// Create an array of Shape objects
+Shape[] shapes = new Shape[numberOfShapes];
+
+// Initialize each shape and assign a random color
+for (int i = 0; i < numberOfShapes; i++)
+{
+    shapes[i] = new Shape(); // Create a new Shape
+    ShapeColourHelper.SetRandomColour(shapes[i]); // Assign a random color
+    
+}
+
+// Print out each shape with its color
+Console.WriteLine("Shapes and their colors:");
+for (int i = 0; i < shapes.Length; i++)
+{
+    Console.WriteLine($"Shape {i + 1} Colour: {shapes[i].Colour}");
+}
+
+
+var square = new Square(9);
 
 try
 {
@@ -20,12 +40,13 @@ catch(Exception ex)
 
 
 
-var circle = new Circle();
+var circle = new Circle(2);
 
-ShapeColourHelper.AddColour(circle);
+ShapeColourHelper.SetRandomColour(circle);
 
 
-
+Console.WriteLine("The area of circle is " + Math.Round(circle.GetArea(),2));
+Console.WriteLine(circle.Colour);
 
 
 ShapeColourHelper.AddColour(square);
